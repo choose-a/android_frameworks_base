@@ -4581,6 +4581,11 @@ message MetricsEvent {
     // OS: N
     QS_CAFFEINE = 1145;
 
+    // OPEN: Heads Up tile shown
+    // CATEGORY: QUICK_SETTINGS
+    // OS: N
+    QS_HEADS_UP = 1146;
+
     // Add new aosp constants above this line.
     // END OF AOSP CONSTANTS
   }
