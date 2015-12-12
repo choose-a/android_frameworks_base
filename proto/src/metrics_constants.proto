@@ -6116,7 +6116,13 @@ message MetricsEvent {
     // OS: P
     FIELD_AUTOFILL_SESSION_ID = 1456;
 
+    // FIELD: Ambient Display tile shown
+    // CATEGORY: QUICK_SETTINGS
+    // OS: P
+    QS_AMBIENT_DISPLAY = 9001;
+
     // ---- End P Constants, all P constants go above this line ----
+
     // Add new aosp constants above this line.
     // END OF AOSP CONSTANTS
   }
