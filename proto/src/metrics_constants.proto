@@ -6121,6 +6121,11 @@ message MetricsEvent {
     // OS: P
     QS_AMBIENT_DISPLAY = 9001;
 
+    // OPEN: Caffeine tile shown
+    // CATEGORY: QUICK_SETTINGS
+    // OS: P
+    QS_CAFFEINE = 9002;
+
     // ---- End P Constants, all P constants go above this line ----
 
     // Add new aosp constants above this line.
