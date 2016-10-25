@@ -20,4 +20,7 @@
 -->
 <resources>
     <bool name="config_dozeAlwaysOnDisplayEnabledDefault">true</bool>
+
+    <!-- Whether notify fingerprint client of successful cancelled authentication -->
+    <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
 </resources>
