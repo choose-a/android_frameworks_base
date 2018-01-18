@@ -3942,6 +3942,16 @@ public final class Settings {
         public static final String SHOW_BATTERY_IMAGE = "status_bar_show_battery_image";
 
         /**
+         * Force an Ambient notification when a new media track is being played
+         * 0 - disabled
+         * 1 - show track info within normal Ambient Display and also force new
+         * notifications when skipping tracks
+         * 2 - like 1, but for forced notifications use a clean layout with hidden clock
+         * @hide
+         */
+        public static final String FORCE_AMBIENT_FOR_MEDIA = "force_ambient_for_media";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
@@ -4108,6 +4118,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(EGG_MODE);
             PRIVATE_SETTINGS.add(SHOW_BATTERY_PERCENT);
             PRIVATE_SETTINGS.add(SHOW_BATTERY_IMAGE);
+            PRIVATE_SETTINGS.add(FORCE_AMBIENT_FOR_MEDIA);
         }
 
         /**
