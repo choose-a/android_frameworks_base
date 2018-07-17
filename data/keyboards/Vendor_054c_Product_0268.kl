@@ -32,6 +32,9 @@ key 0x129    BUTTON_R2
 key 0x121    BUTTON_THUMBL
 key 0x122    BUTTON_THUMBR
 
+# PS key
+key 0x2d0    BUTTON_MODE
+
 # Left Analog Stick
 axis 0x00    X
 axis 0x01    Y
