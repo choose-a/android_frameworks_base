@@ -2929,6 +2929,11 @@ public class WindowManagerService extends IWindowManager.Stub
     }
 
     @Override
+    public void onKeyguardShowingAndNotOccludedChanged() {
+        mH.sendEmptyMessage(H.RECOMPUTE_FOCUS);
+    }
+
+    @Override
     public void screenTurningOff(ScreenOffListener listener) {
         mTaskSnapshotController.screenTurningOff(listener);
     }
@@ -4909,6 +4914,7 @@ public class WindowManagerService extends IWindowManager.Stub
         public static final int NOTIFY_KEYGUARD_FLAGS_CHANGED = 56;
         public static final int NOTIFY_KEYGUARD_TRUSTED_CHANGED = 57;
         public static final int SET_HAS_OVERLAY_UI = 58;
+        public static final int RECOMPUTE_FOCUS = 61;
 
         /**
          * Used to denote that an integer field in a message will not be used.
@@ -5373,6 +5379,13 @@ public class WindowManagerService extends IWindowManager.Stub
                 break;
                 case SET_HAS_OVERLAY_UI: {
                     mAmInternal.setHasOverlayUi(msg.arg1, msg.arg2 == 1);
+                }
+                break;
+                case RECOMPUTE_FOCUS: {
+                    synchronized (mWindowMap) {
+                        updateFocusedWindowLocked(UPDATE_FOCUS_NORMAL,
+                                true /* updateInputWindows */);
+                    }
                 }
                 break;
             }
